@@ -1,6 +1,7 @@
 
 package AdminInterface;
 
+import AdminPart.ScollBar;
 import java.awt.Color;
 
 public class Admin extends javax.swing.JFrame {
@@ -11,6 +12,7 @@ public class Admin extends javax.swing.JFrame {
         setBackground(new Color(0,0,0,0));
         menu1.initMoving(Admin.this);
         sp.setVerticalScrollBar(new ScollBar());
+        sp.setHorizontalScrollBar(new ScollBar());
     }
 
     /**
@@ -29,11 +31,13 @@ public class Admin extends javax.swing.JFrame {
         form_Home1 = new AdminPart.Form_Home();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Admin Page");
         setUndecorated(true);
 
         panelBorder1.setBackground(new java.awt.Color(246, 246, 246));
 
         sp.setBorder(null);
+        sp.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         sp.setViewportView(form_Home1);
 
         javax.swing.GroupLayout panelBorder1Layout = new javax.swing.GroupLayout(panelBorder1);
@@ -47,7 +51,7 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(header2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panelBorder1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(sp)
+                        .addComponent(sp, javax.swing.GroupLayout.DEFAULT_SIZE, 851, Short.MAX_VALUE)
                         .addContainerGap())))
         );
         panelBorder1Layout.setVerticalGroup(
@@ -56,8 +60,7 @@ public class Admin extends javax.swing.JFrame {
             .addGroup(panelBorder1Layout.createSequentialGroup()
                 .addComponent(header2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sp, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(sp, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

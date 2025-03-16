@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package AdminInterface;
+package AdminPart;
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
@@ -20,14 +20,14 @@ public class ScollBar extends JScrollBar {
         protected void paintThumb(Graphics g, JComponent c, Rectangle thumbBounds) {
             Graphics2D g2 = (Graphics2D) g.create();
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(new Color(169, 169, 169));
-            g2.fillRoundRect(thumbBounds.x, thumbBounds.y, thumbBounds.width, thumbBounds.height, 10, 10);
+            g2.setColor(new Color(37,33,94));
+            g2.fillRoundRect(thumbBounds.x, thumbBounds.y, thumbBounds.width, thumbBounds.height, 2, 2);
             g2.dispose();
         }
 
         @Override
         protected void paintTrack(Graphics g, JComponent c, Rectangle trackBounds) {
-            g.setColor(new Color(211, 211, 211)); 
+            g.setColor(new Color(255,204,204)); 
             g.fillRect(trackBounds.x, trackBounds.y, trackBounds.width, trackBounds.height);
         }
 
