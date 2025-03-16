@@ -78,9 +78,9 @@
                                       <Component id="tfPassword" min="-2" pref="443" max="-2" attributes="0"/>
                                       <Component id="btnLogin" alignment="1" min="-2" pref="443" max="-2" attributes="0"/>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="jLabel1" min="-2" pref="156" max="-2" attributes="0"/>
+                                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="btnRegister" min="-2" pref="102" max="-2" attributes="0"/>
+                                          <Component id="btnRegister" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
@@ -201,7 +201,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnRegister">
               <Properties>
-                <Property name="text" type="java.lang.String" value="T&#x1ea1;o t&#xe0;i kho&#x1ea3;n"/>
+                <Property name="text" type="java.lang.String" value="Create an account"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
@@ -214,7 +214,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="N&#x1ebf;u b&#x1ea1;n ch&#x1b0;a c&#xf3; t&#xe0;i kho&#x1ea3;n ?"/>
+                <Property name="text" type="java.lang.String" value="Don&apos;t have an account?"/>
               </Properties>
             </Component>
           </SubComponents>

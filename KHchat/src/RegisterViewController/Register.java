@@ -4,6 +4,7 @@
  */
 package RegisterViewController;
 
+import LoginViewController.Login;
 import java.awt.Color;
 import org.jdesktop.swingx.border.DropShadowBorder;
 
@@ -39,6 +40,8 @@ public class Register extends javax.swing.JFrame {
         tfFirstName = new javax.swing.JTextField();
         tfPassword = new javax.swing.JPasswordField();
         button1 = new CustomButton.Button();
+        jLabel1 = new javax.swing.JLabel();
+        btnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,6 +107,22 @@ public class Register extends javax.swing.JFrame {
         button1.setText("Register");
         button1.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
 
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Already have an account?");
+
+        btnLogin.setText("Login");
+        btnLogin.setBorderPainted(false);
+        btnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLoginMouseClicked(evt);
+            }
+        });
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnRegisterLayout = new javax.swing.GroupLayout(pnRegister);
         pnRegister.setLayout(pnRegisterLayout);
         pnRegisterLayout.setHorizontalGroup(
@@ -111,9 +130,6 @@ public class Register extends javax.swing.JFrame {
             .addGroup(pnRegisterLayout.createSequentialGroup()
                 .addGap(140, 140, 140)
                 .addGroup(pnRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnRegisterLayout.createSequentialGroup()
-                        .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(pnRegisterLayout.createSequentialGroup()
                         .addGroup(pnRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(pnRegisterLayout.createSequentialGroup()
@@ -127,7 +143,15 @@ public class Register extends javax.swing.JFrame {
                                 .addGap(56, 56, 56)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
                         .addComponent(imgRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28))))
+                        .addGap(28, 28, 28))
+                    .addGroup(pnRegisterLayout.createSequentialGroup()
+                        .addGroup(pnRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnRegisterLayout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         pnRegisterLayout.setVerticalGroup(
             pnRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,7 +160,7 @@ public class Register extends javax.swing.JFrame {
                 .addGroup(pnRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(imgRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(77, 77, 77)
+                .addGap(29, 29, 29)
                 .addGroup(pnRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tfLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -146,7 +170,11 @@ public class Register extends javax.swing.JFrame {
                 .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(pnRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(btnLogin))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         background1.add(pnRegister);
@@ -311,6 +339,15 @@ public class Register extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_tfPasswordFocusLost
 
+    private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
+        new Login();
+        this.dispose();
+    }//GEN-LAST:event_btnLoginMouseClicked
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLoginActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -350,13 +387,49 @@ public class Register extends javax.swing.JFrame {
         tfPassword.setEchoChar((char)0 );
         this.setVisible(true);
         this.setLocationRelativeTo(null);
+        
+        btnLogin.setBackground(new Color(0,0,0,0));
+        btnLogin.setForeground(new Color(0,0,139));
+    }
+    
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Register().setVisible(true);
+            }
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private RegisterViewController.Background background1;
+    private javax.swing.JButton btnLogin;
     private CustomButton.Button button1;
     private RegisterViewController.RegisterIcon imgRegister;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblRegister;
     private javax.swing.JPanel pnRegister;
     private javax.swing.JTextField tfFirstName;
