@@ -75,6 +75,11 @@ public class Register extends javax.swing.JFrame {
                 tfUserNameFocusLost(evt);
             }
         });
+        tfUserName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfUserNameActionPerformed(evt);
+            }
+        });
 
         tfFirstName.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         tfFirstName.setText("First Name");
@@ -295,7 +300,7 @@ public class Register extends javax.swing.JFrame {
         shadow.setShowBottomShadow(true);
         tfUserName.setBorder(shadow);
         
-        String defaultString="Usename";
+        String defaultString="Username";
         if (tfUserName.getText().equals("")){
             tfUserName.setText(defaultString);
             tfUserName.setForeground(new Color(60,60,60));
@@ -347,6 +352,10 @@ public class Register extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void tfUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfUserNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfUserNameActionPerformed
 
     /**
      * @param args the command line arguments

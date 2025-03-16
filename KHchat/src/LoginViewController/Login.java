@@ -46,12 +46,12 @@ public class Login extends javax.swing.JFrame {
         pnLogin = new javax.swing.JPanel();
         accountIcon = new LoginViewController.AccountIcon();
         lblLoginTitle = new javax.swing.JLabel();
-        tfPassword = new javax.swing.JTextField();
         tfUsername = new javax.swing.JTextField();
         btnForgotPasword = new javax.swing.JButton();
         btnLogin = new CustomButton.Button();
         btnRegister = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        tfPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,23 +68,6 @@ public class Login extends javax.swing.JFrame {
         lblLoginTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblLoginTitle.setText("Login");
         lblLoginTitle.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-
-        tfPassword.setBackground(new java.awt.Color(0, 0, 0));
-        tfPassword.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        tfPassword.setText("Password");
-        tfPassword.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                tfPasswordFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                tfPasswordFocusLost(evt);
-            }
-        });
-        tfPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfPasswordActionPerformed(evt);
-            }
-        });
 
         tfUsername.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         tfUsername.setText("Username");
@@ -141,6 +124,22 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Don't have an account?");
 
+        tfPassword.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        tfPassword.setText("Password");
+        tfPassword.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tfPasswordFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                tfPasswordFocusLost(evt);
+            }
+        });
+        tfPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfPasswordActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnLoginLayout = new javax.swing.GroupLayout(pnLogin);
         pnLogin.setLayout(pnLoginLayout);
         pnLoginLayout.setHorizontalGroup(
@@ -156,7 +155,6 @@ public class Login extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnLoginLayout.createSequentialGroup()
                             .addGroup(pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(btnForgotPasword)
-                                .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(pnLoginLayout.createSequentialGroup()
                                     .addComponent(jLabel1)
@@ -164,7 +162,9 @@ public class Login extends javax.swing.JFrame {
                                     .addComponent(btnRegister)))
                             .addGap(32, 32, 32)))
                     .addGroup(pnLoginLayout.createSequentialGroup()
-                        .addComponent(tfUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(32, 32, 32))))
         );
         pnLoginLayout.setVerticalGroup(
@@ -176,9 +176,9 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(accountIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(76, 76, 76)
                 .addComponent(tfUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
+                .addGap(32, 32, 32)
                 .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(37, 37, 37)
                 .addComponent(btnForgotPasword)
                 .addGap(29, 29, 29)
                 .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -186,7 +186,7 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegister)
                     .addComponent(jLabel1))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         background.add(pnLogin);
@@ -211,10 +211,6 @@ public class Login extends javax.swing.JFrame {
     private void tfUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfUsernameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfUsernameActionPerformed
-
-    private void tfPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfPasswordActionPerformed
 
     private void tfUsernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tfUsernameMouseClicked
         
@@ -263,41 +259,6 @@ public class Login extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_tfUsernameFocusLost
 
-    private void tfPasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfPasswordFocusGained
-        DropShadowBorder shadow = new DropShadowBorder();
-        shadow.setShadowColor(Color.BLUE);
-        shadow.setShadowSize(5); // Size of the shadow
-        shadow.setShowLeftShadow(true);
-        shadow.setShowRightShadow(true);
-        shadow.setShowTopShadow(true);
-        shadow.setShowBottomShadow(true);
-        tfPassword.setBorder(shadow);
-        
-        String defaultString="Password";
-        if (tfPassword.getText().equals(defaultString)){
-            tfPassword.setText("");
-            tfPassword.setForeground(Color.BLACK);
-        }
-    }//GEN-LAST:event_tfPasswordFocusGained
-
-    private void tfPasswordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfPasswordFocusLost
-        DropShadowBorder shadow = new DropShadowBorder();
-        shadow.setShadowColor(Color.BLACK);
-        shadow.setShadowSize(3); // Size of the shadow
-        shadow.setShowLeftShadow(true);
-        shadow.setShowRightShadow(true);
-        shadow.setShowTopShadow(true);
-        shadow.setShowBottomShadow(true);
-        tfPassword.setBorder(shadow);
-        
-        String defaultString="Password";
-        if (tfPassword.getText().equals("")){
-            tfPassword.setText(defaultString);
-            tfPassword.setForeground(new Color(80,80,80));
-
-        }
-    }//GEN-LAST:event_tfPasswordFocusLost
-
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLoginActionPerformed
@@ -310,6 +271,46 @@ public class Login extends javax.swing.JFrame {
         new Register();
         this.dispose();
     }//GEN-LAST:event_btnRegisterMouseClicked
+
+    private void tfPasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfPasswordFocusGained
+        DropShadowBorder shadow = new DropShadowBorder();
+        shadow.setShadowColor(Color.BLUE);
+        shadow.setShadowSize(5); // Size of the shadow
+        shadow.setShowLeftShadow(true);
+        shadow.setShowRightShadow(true);
+        shadow.setShowTopShadow(true);
+        shadow.setShowBottomShadow(true);
+        tfPassword.setBorder(shadow);
+
+        String defaultString="Password";
+        if (tfPassword.getText().equals(defaultString)){
+            tfPassword.setText("");
+            tfPassword.setForeground(Color.BLACK);
+            tfPassword.setEchoChar('*');
+        }
+    }//GEN-LAST:event_tfPasswordFocusGained
+
+    private void tfPasswordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfPasswordFocusLost
+        DropShadowBorder shadow = new DropShadowBorder();
+        shadow.setShadowColor(Color.BLACK);
+        shadow.setShadowSize(3); // Size of the shadow
+        shadow.setShowLeftShadow(true);
+        shadow.setShowRightShadow(true);
+        shadow.setShowTopShadow(true);
+        shadow.setShowBottomShadow(true);
+        tfPassword.setBorder(shadow);
+
+        String defaultString="Password";
+        if (tfPassword.getText().equals("")){
+            tfPassword.setText(defaultString);
+            tfPassword.setForeground(new Color(60,60,60));
+            tfPassword.setEchoChar((char)0 );
+        }
+    }//GEN-LAST:event_tfPasswordFocusLost
+
+    private void tfPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfPasswordActionPerformed
     private void init(){
 //        this.setSize(1200, 700);
         this.setLocationRelativeTo(null);
@@ -339,6 +340,7 @@ public class Login extends javax.swing.JFrame {
         
         tfUsername.setForeground(new Color(80,80,80));
         tfPassword.setForeground(new Color(80,80,80));
+        tfPassword.setEchoChar((char)0 );
         
         btnForgotPasword.setBackground(new Color(0,0,0,0));
         btnForgotPasword.setForeground(new Color(0,0,139));
@@ -390,7 +392,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblLoginTitle;
     private javax.swing.JPanel pnLogin;
-    private javax.swing.JTextField tfPassword;
+    private javax.swing.JPasswordField tfPassword;
     private javax.swing.JTextField tfUsername;
     // End of variables declaration//GEN-END:variables
    
