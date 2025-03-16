@@ -54,7 +54,7 @@ public class Register extends javax.swing.JFrame {
         lblRegister.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         lblRegister.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
-        tfLastName.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        tfLastName.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         tfLastName.setText("Last Name");
         tfLastName.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -65,7 +65,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
-        tfUserName.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        tfUserName.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         tfUserName.setText("Username");
         tfUserName.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -81,7 +81,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
-        tfFirstName.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        tfFirstName.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         tfFirstName.setText("First Name");
         tfFirstName.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -92,7 +92,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
-        tfPassword.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        tfPassword.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         tfPassword.setText("Password");
         tfPassword.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {

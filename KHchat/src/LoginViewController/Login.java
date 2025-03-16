@@ -69,7 +69,7 @@ public class Login extends javax.swing.JFrame {
         lblLoginTitle.setText("Login");
         lblLoginTitle.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        tfUsername.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        tfUsername.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         tfUsername.setText("Username");
         tfUsername.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -124,7 +124,7 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Don't have an account?");
 
-        tfPassword.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        tfPassword.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         tfPassword.setText("Password");
         tfPassword.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -254,7 +254,7 @@ public class Login extends javax.swing.JFrame {
         String defaultString="Username";
         if (tfUsername.getText().equals("")){
             tfUsername.setText(defaultString);
-            tfUsername.setForeground(new Color(80,80,80));
+            tfUsername.setForeground(new Color(60,60,60));
 
         }
     }//GEN-LAST:event_tfUsernameFocusLost
@@ -338,8 +338,8 @@ public class Login extends javax.swing.JFrame {
         tfUsername.setBackground(new Color(0,0,0,0));
         tfUsername.setBorder(shadow1);
         
-        tfUsername.setForeground(new Color(80,80,80));
-        tfPassword.setForeground(new Color(80,80,80));
+        tfUsername.setForeground(new Color(60,60,60));
+        tfPassword.setForeground(new Color(60,60,60));
         tfPassword.setEchoChar((char)0 );
         
         btnForgotPasword.setBackground(new Color(0,0,0,0));
