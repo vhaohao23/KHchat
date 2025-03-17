@@ -23,7 +23,7 @@ public class AccountIcon extends JComponent{
 
     public AccountIcon() {
         try {
-            URL imageUrl = getClass().getResource("/LoginImage/AccountIcon.png");
+            URL imageUrl = getClass().getResource("/AdminImage/userB.png");
             if (imageUrl != null) {
                 image = ImageIO.read(imageUrl);
             } else {
