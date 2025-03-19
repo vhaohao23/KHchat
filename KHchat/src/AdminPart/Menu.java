@@ -12,6 +12,12 @@ import javax.swing.JFrame;
 
 public class Menu extends javax.swing.JPanel {
 
+    private EventMenuSelected event;
+    
+    public void addEventMenuSelected (EventMenuSelected event){
+        this.event = event;
+        listMenu1.addEventMenuSelected(event);
+    }
     public Menu() {
         initComponents();
         setOpaque(false);
@@ -21,6 +27,7 @@ public class Menu extends javax.swing.JPanel {
     private void init(){
         listMenu1.addItem(new Model_Menu("", " ", Model_Menu.MenuType.EMTY));
         listMenu1.addItem(new Model_Menu("inbox", "Home", Model_Menu.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu("analytics", "Analysis", Model_Menu.MenuType.MENU));
     }
 
     @SuppressWarnings("unchecked")
