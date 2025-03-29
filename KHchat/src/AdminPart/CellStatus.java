@@ -1,6 +1,8 @@
 
 package AdminPart;
 
+import AdminPart.StatusType;
+
 public class CellStatus extends javax.swing.JPanel {
 
     public CellStatus(StatusType type) {

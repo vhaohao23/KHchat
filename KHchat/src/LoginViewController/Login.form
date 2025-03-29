@@ -72,8 +72,8 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace pref="75" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="btnForgotPasword" min="-2" max="-2" attributes="0"/>
                                       <Component id="btnLogin" alignment="1" min="-2" pref="443" max="-2" attributes="0"/>
@@ -83,15 +83,10 @@
                                           <Component id="btnRegister" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="tfPassword" min="-2" pref="443" max="-2" attributes="0"/>
+                                  <Component id="tfUsername" min="-2" pref="443" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="tfPassword" min="-2" pref="443" max="-2" attributes="0"/>
-                                      <Component id="tfUsername" min="-2" pref="443" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              </Group>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="accountIcon" min="-2" pref="113" max="-2" attributes="0"/>

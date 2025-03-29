@@ -1,6 +1,7 @@
 
 package AdminPart;
 
+import AdminPart.Model_Card;
 import java.awt.Color;
 import java.awt.GradientPaint;
 import java.awt.Graphics;

@@ -1,6 +1,8 @@
 
-package AdminPart;
+package AdminInterface;
 
+import AdminPart.EventMenuSelected;
+import AdminPart.Model_Menu;
 import java.awt.Color;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
